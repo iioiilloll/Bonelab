@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김재영 교수 연구실 | Prof. Kim Jae-Young's Lab - Korea University Ansan Hospital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .language-toggle {
+            background: #f3f4f6;
+            border: 2px solid #e5e7eb;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: fit-content;
+            align-self: center;
+        }
+
+        .language-toggle:hover {
+            background: #e5e7eb;
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .language-toggle.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            padding-top: 80px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .cta-button.primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .cta-button.primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .cta-button.secondary {
+            background: #f8fafc;
+            color: #374151;
+            border: 2px solid #e5e7eb;
+        }
+
+        .cta-button.secondary:hover {
+            background: #f1f5f9;
+            border-color: #d1d5db;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section.gray {
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #d1d5db;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2563eb;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #374151;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .team-member {
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #2563eb;
+            font-weight: 700;
+            border: 3px solid #e5e7eb;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .contact-section {
+            background: #f8fafc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item strong {
+            color: #374151;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item div {
+            color: #6b7280;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 0 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            color: #9ca3af;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #374151;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .publication-item {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-journal {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .publication-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Language-specific content visibility */
+        [data-lang="en"] .ko-only,
+        [data-lang="ko"] .en-only {
+            display: none !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                border-top: 1px solid #e5e7eb;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+
+            .nav-menu .language-toggle {
+                width: 100%;
+                text-align: center;
+                margin-top: 1rem;
+                padding: 0.75rem;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .lab-visual {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='50' cy='50' r='20' stroke='%232563eb' stroke-width='2' fill='none'/><circle cx='150' cy='100' r='15' stroke='%232563eb' stroke-width='2' fill='none'/><circle cx='100' cy='150' r='25' stroke='%232563eb' stroke-width='2' fill='none'/><path d='M50,70 Q100,90 150,80' stroke='%232563eb' stroke-width='1' fill='none'/></svg>");
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+    </style>
+</head>
+<body data-lang="ko">
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="ko-only">김재영 연구실</span>
+                <span class="en-only">Prof. Kim's Lab</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home"><span class="ko-only">홈</span><span class="en-only">Home</span></a></li>
+                    <li><a href="#about"><span class="ko-only">연구실 소개</span><span class="en-only">About</span></a></li>
+                    <li><a href="#research"><span class="ko-only">연구 분야</span><span class="en-only">Research</span></a></li>
+                    <li><a href="#team"><span class="ko-only">연구진</span><span class="en-only">Team</span></a></li>
+                    <li><a href="#publications"><span class="ko-only">논문</span><span class="en-only">Publications</span></a></li>
+                    <li><a href="#contact"><span class="ko-only">연락처</span><span class="en-only">Contact</span></a></li>
+                    <li>
+                        <button class="language-toggle" onclick="toggleLanguage()">
+                            <span class="ko-only">English</span>
+                            <span class="en-only">한국어</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="subtitle">
+                    <span class="ko-only">첨단 의학 연구실</span>
+                    <span class="en-only">Advanced Medical Research Laboratory</span>
+                </div>
+                <h1>
+                    <span class="ko-only">혁신적인 의학 연구로<br>미래를 만들어갑니다</span>
+                    <span class="en-only">Shaping the Future Through<br>Innovative Medical Research</span>
+                </h1>
+                <p class="ko-only">고려대학교 안산병원 김재영 교수 연구실에서는 최첨단 의학 연구를 통해 인류의 건강과 복지 향상에 기여하고 있습니다.</p>
+                <p class="en-only">Prof. Kim Jae-Young's laboratory at Korea University Ansan Hospital conducts cutting-edge medical research to improve human health and welfare.</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="cta-button primary">
+                        <span class="ko-only">연구실 둘러보기</span>
+                        <span class="en-only">Explore Lab</span>
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <span class="ko-only">연락하기</span>
+                        <span class="en-only">Contact Us</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="lab-visual"></div>
+                    <svg width="300" height="300" viewBox="0 0 300 300">
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2563eb" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="150" cy="100" r="40" fill="url(#gradient1)" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="100" cy="180" r="30" fill="url(#gradient1)" stroke="#2563eb" stroke-width="2"/>
+                        <circle cx="200" cy="180" r="35" fill="url(#gradient1)" stroke="#2563eb" stroke-width="2"/>
+                        <path d="M150,140 Q125,160 100,150 M150,140 Q175,160 200,145" stroke="#2563eb" stroke-width="2" fill="none"/>
+                        <text x="150" y="105" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="600">RESEARCH</text>
+                        <text x="100" y="185" text-anchor="middle" fill="#2563eb" font-size="10">LAB</text>
+                        <text x="200" y="185" text-anchor="middle" fill="#2563eb" font-size="10">INNOVATION</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">
+                    <span class="ko-only">연구실 소개</span>
+                    <span class="en-only">About Our Laboratory</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="ko-only">첨단 의학 연구의 선두주자</span>
+                    <span class="en-only">Leader in Advanced Medical Research</span>
+                </h2>
+                <p class="section-description ko-only">김재영 교수 연구실은 고려대학교 안산병원의 핵심 연구기관으로서, 혁신적인 의학 연구를 통해 질병 치료와 예방의 새로운 패러다임을 제시하고 있습니다.</p>
+                <p class="section-description en-only">Prof. Kim Jae-Young's laboratory is a core research institution at Korea University Ansan Hospital, presenting new paradigms in disease treatment and prevention through innovative medical research.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <div class="stat-label ko-only">발표 논문</div>
+                    <div class="stat-label en-only">Published Papers</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <div class="stat-label ko-only">연구 프로젝트</div>
+                    <div class="stat-label en-only">Research Projects</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <div class="stat-label ko-only">연구진</div>
+                    <div class="stat-label en-only">Research Members</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <div class="stat-label ko-only">국제 협력</div>
+                    <div class="stat-label en-only">International Collaborations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">
+                    <span class="ko-only">주요 연구 분야</span>
+                    <span class="en-only">Research Areas</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="ko-only">혁신적인 의학 연구</span>
+                    <span class="en-only">Innovative Medical Research</span>
+                </h2>
+                <p class="section-description ko-only">기초 의학과 임상 의학을 아우르는 융합 연구를 통해 실질적인 의료 솔루션을 개발합니다.</p>
+                <p class="section-description en-only">We develop practical medical solutions through convergence research encompassing basic and clinical medicine.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🧬</div>
+                    <h3 class="ko-only">분자생물학 연구</h3>
+                    <h3 class="en-only">Molecular Biology Research</h3>
+                    <p class="ko-only">질병의 분자적 메커니즘을 규명하고 새로운 치료 타겟을 발굴하는 기초 연구를 수행합니다.</p>
+                    <p class="en-only">We conduct basic research to elucidate molecular mechanisms of diseases and discover new therapeutic targets.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3 class="ko-only">임상 시험 연구</h3>
+                    <h3 class="en-only">Clinical Trial Research</h3>
+                    <p class="ko-only">혁신적인 치료법의 안전성과 효능을 검증하는 다양한 임상 시험을 진행합니다.</p>
+                    <p class="en-only">We conduct various clinical trials to verify the safety and efficacy of innovative treatments.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚕️</div>
+                    <h3 class="ko-only">정밀의학 연구</h3>
+                    <h3 class="en-only">Precision Medicine Research</h3>
+                    <p class="ko-only">개인의 유전적 특성을 고려한 맞춤형 치료법 개발에 앞장서고 있습니다.</p>
+                    <p class="en-only">We lead the development of personalized treatments considering individual genetic characteristics.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💊</div>
+                    <h3 class="ko-only">신약 개발</h3>
+                    <h3 class="en-only">Drug Development</h3>
+                    <p class="ko-only">차세대 치료제 개발을 위한 약물 스크리닝과 최적화 연구를 수행합니다.</p>
+                    <p class="en-only">We conduct drug screening and optimization research for next-generation therapeutics development.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="ko-only">AI 의료 연구</h3>
+                    <h3 class="en-only">AI Medical Research</h3>
+                    <p class="ko-only">인공지능 기술을 활용한 질병 진단과 치료 예측 모델을 개발합니다.</p>
+                    <p class="en-only">We develop disease diagnosis and treatment prediction models using artificial intelligence technology.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3 class="ko-only">바이오마커 연구</h3>
+                    <h3 class="en-only">Biomarker Research</h3>
+                    <p class="ko-only">질병의 조기 진단과 예후 예측을 위한 새로운 바이오마커를 발굴합니다.</p>
+                    <p class="en-only">We discover new biomarkers for early diagnosis and prognosis prediction of diseases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">
+                    <span class="ko-only">연구진</span>
+                    <span class="en-only">Research Team</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="ko-only">전문 연구진</span>
+                    <span class="en-only">Expert Research Team</span>
+                </h2>
+                <p class="section-description ko-only">각 분야의 전문가들이 협력하여 세계 수준의 연구를 수행하고 있습니다.</p>
+                <p class="section-description en-only">Experts from various fields collaborate to conduct world-class research.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="team-member">
+                    <div class="team-avatar">김재영</div>
+                    <div class="team-name ko-only">김재영 교수</div>
+                    <div class="team-name en-only">Prof. Kim Jae-Young, MD, PhD</div>
+                    <div class="team-role ko-only">연구실 책임자</div>
+                    <div class="team-role en-only">Principal Investigator</div>
+                    <div class="team-bio ko-only">고려대학교 안산병원 교수로서 20년 이상의 임상 및 연구 경험을 보유하고 있으며, 분야 최고 수준의 연구 성과를 이루고 있습니다.</div>
+                    <div class="team-bio en-only">As a professor at Korea University Ansan Hospital, he has over 20 years of clinical and research experience and has achieved top-level research results in the field.</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">박○○</div>
+                    <div class="team-name ko-only">박○○ 박사</div>
+                    <div class="team-name en-only">Dr. Park ○○, PhD</div>
+                    <div class="team-role ko-only">선임연구원</div>
+                    <div class="team-role en-only">Senior Research Scientist</div>
+                    <div class="team-bio ko-only">분자생물학 전문가로서 10년 이상의 연구 경험을 가지고 있으며, 다수의 국제 논문을 발표했습니다.</div>
+                    <div class="team-bio en-only">As a molecular biology expert with over 10 years of research experience, he has published numerous international papers.</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">이○○</div>
+                    <div class="team-name ko-only">이○○ 박사</div>
+                    <div class="team-name en-only">Dr. Lee ○○, MD, PhD</div>
+                    <div class="team-role ko-only">선임연구원</div>
+                    <div class="team-role en-only">Senior Research Scientist</div>
+                    <div class="team-bio ko-only">임상시험 전문가로서 다양한 임상 연구 프로젝트를 성공적으로 수행해왔습니다.</div>
+                    <div class="team-bio en-only">As a clinical trial expert, she has successfully conducted various clinical research projects.</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">최○○</div>
+                    <div class="team-name ko-only">최○○ 연구원</div>
+                    <div class="team-name en-only">Choi ○○, MS</div>
+                    <div class="team-role ko-only">박사과정</div>
+                    <div class="team-role en-only">PhD Candidate</div>
+                    <div class="team-bio ko-only">정밀의학 분야의 박사과정 학생으로서 차세대 치료법 개발에 열정을 가지고 연구하고 있습니다.</div>
+                    <div class="team-bio en-only">As a PhD student in precision medicine, she is passionately researching the development of next-generation treatments.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="section gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">
+                    <span class="ko-only">주요 연구 성과</span>
+                    <span class="en-only">Publications</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="ko-only">최신 연구 논문</span>
+                    <span class="en-only">Recent Research Papers</span>
+                </h2>
+                <p class="section-description ko-only">국제적으로 인정받는 학술지에 발표된 주요 연구 성과들입니다.</p>
+                <p class="section-description en-only">Major research achievements published in internationally recognized journals.</p>
+            </div>
+            <div class="publication-item">
+                <div class="publication-journal">Nature Medicine (2024)</div>
+                <h3 class="publication-title ko-only">정밀의학 분야의 혁신적인 치료 타겟에 대한 포괄적 분석</h3>
+                <h3 class="publication-title en-only">"Novel therapeutic targets in precision medicine: A comprehensive analysis"</h3>
+                <p class="publication-description ko-only">Kim, J.Y. et al. 정밀의학 분야에서 새로운 치료 타겟을 발굴하고, 개인 맞춤형 치료법의 가능성을 제시한 혁신적인 연구입니다.</p>
+                <p class="publication-description en-only">Kim, J.Y. et al. This innovative research discovers new therapeutic targets in precision medicine and presents the possibility of personalized treatments.</p>
+            </div>
+            <div class="publication-item">
+                <div class="publication-journal">Cell (2023)</div>
+                <h3 class="publication-title ko-only">질병 진행의 분자적 메커니즘 규명</h3>
+                <h3 class="publication-title en-only">"Molecular mechanisms underlying disease progression"</h3>
+                <p class="publication-description ko-only">Kim, J.Y., Park, S.H. et al. 질병 진행 과정에서 일어나는 분자 수준의 변화를 체계적으로 분석하여, 새로운 치료 전략 개발의 기초를 마련했습니다.</p>
+                <p class="publication-description en-only">Kim, J.Y., Park, S.H. et al. Systematically analyzed molecular-level changes during disease progression, laying the foundation for developing new therapeutic strategies.</p>
+            </div>
+            <div class="publication-item">
+                <div class="publication-journal">New England Journal of Medicine (2023)</div>
+                <h3 class="publication-title ko-only">개인 맞춤형 치료법의 임상적 효능 검증</h3>
+                <h3 class="publication-title en-only">"Clinical efficacy of personalized treatment approaches"</h3>
+                <p class="publication-description ko-only">Lee, M.J., Kim, J.Y. et al. 대규모 임상 시험을 통해 개인 맞춤형 치료법의 효능과 안전성을 입증한 연구입니다.</p>
+                <p class="publication-description en-only">Lee, M.J., Kim, J.Y. et al. This study demonstrates the efficacy and safety of personalized treatments through large-scale clinical trials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">
+                    <span class="ko-only">연락처</span>
+                    <span class="en-only">Contact Us</span>
+                </div>
+                <h2 class="section-title">
+                    <span class="ko-only">연구 협력 문의</span>
+                    <span class="en-only">Research Collaboration Inquiry</span>
+                </h2>
+                <p class="section-description ko-only">연구 협력, 학술 교류, 기타 문의사항이 있으시면 언제든 연락주세요.</p>
+                <p class="section-description en-only">Please contact us anytime for research collaboration, academic exchange, or other inquiries.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="ko-only">연구실 정보</h3>
+                    <h3 class="en-only">Laboratory Information</h3>
+                    <div class="contact-item">
+                        <strong class="ko-only">주소</strong>
+                        <strong class="en-only">Address</strong>
+                        <div class="ko-only">경기도 안산시 단원구 적금로 123 고려대학교 안산병원</div>
+                        <div class="en-only">123, Jeokgeum-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Korea University Ansan Hospital</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong class="ko-only">전화</strong>
+                        <strong class="en-only">Phone</strong>
+                        <div>+82-31-412-5000</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong class="ko-only">이메일</strong>
+                        <strong class="en-only">Email</strong>
+                        <div>kimjy.lab@korea.ac.kr</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong class="ko-only">운영시간</strong>
+                        <strong class="en-only">Office Hours</strong>
+                        <div class="ko-only">월-금 09:00-18:00 (한국시간)</div>
+                        <div class="en-only">Mon-Fri 09:00-18:00 (KST)</div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="ko-only">이름</label>
+                            <label for="name" class="en-only">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="ko-only">이메일</label>
+                            <label for="email" class="en-only">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="affiliation" class="ko-only">소속</label>
+                            <label for="affiliation" class="en-only">Affiliation</label>
+                            <input type="text" id="affiliation" name="affiliation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="ko-only">제목</label>
+                            <label for="subject" class="en-only">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="ko-only">메시지</label>
+                            <label for="message" class="en-only">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span class="ko-only">메시지 보내기</span>
+                            <span class="en-only">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="ko-only">김재영 연구실</span>
+                <span class="en-only">Prof. Kim Jae-Young's Laboratory</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home"><span class="ko-only">홈</span><span class="en-only">Home</span></a>
+                <a href="#about"><span class="ko-only">소개</span><span class="en-only">About</span></a>
+                <a href="#research"><span class="ko-only">연구</span><span class="en-only">Research</span></a>
+                <a href="#team"><span class="ko-only">연구진</span><span class="en-only">Team</span></a>
+                <a href="#publications"><span class="ko-only">논문</span><span class="en-only">Publications</span></a>
+                <a href="#contact"><span class="ko-only">연락처</span><span class="en-only">Contact</span></a>
+            </div>
+            <div class="footer-bottom">
+                <p class="ko-only">&copy; 2025 김재영 연구실, 고려대학교 안산병원. All rights reserved.</p>
+                <p class="en-only">&copy; 2025 Prof. Kim Jae-Young's Laboratory, Korea University Ansan Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 언어 토글 기능
+        function toggleLanguage() {
+            const body = document.body;
+            const currentLang = body.getAttribute('data-lang');
+            const newLang = currentLang === 'ko' ? 'en' : 'ko';
+            
+            body.setAttribute('data-lang', newLang);
+            
+            // 로컬 스토리지에 언어 설정 저장
+            localStorage.setItem('preferredLanguage', newLang);
+            
+            // 언어 변경 애니메이션
+            document.querySelectorAll('.ko-only, .en-only').forEach(el => {
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                }, 150);
+            });
+        }
+
+        // 페이지 로드 시 저장된 언어 설정 복원
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.body.setAttribute('data-lang', savedLang);
+            }
+        });
+
+        // 부드러운 스크롤 네비게이션
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // 모바일 메뉴 닫기
+                    const navMenu = document.querySelector('.nav-menu');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // 헤더 배경 변경
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // 모든 카드와 요소에 애니메이션 적용
+        document.querySelectorAll('.card, .team-member, .stat-item, .publication-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 폼 제출 이벤트
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const currentLang = document.body.getAttribute('data-lang');
+            const message = currentLang === 'ko' 
+                ? '메시지가 성공적으로 전송되었습니다! 빠른 시일 내에 답변드리겠습니다.'
+                : 'Message sent successfully! We will respond to you soon.';
+            alert(message);
+            this.reset();
+        });
+
+        // 모바일 메뉴 토글
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        });
+
+        // 페이지 로딩 시 애니메이션
+        window.addEventListener('load', function() {
+            document.querySelector('.hero-content').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
