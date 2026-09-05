@@ -1,0 +1,617 @@
+===== PAGE 1 =====
+학술논문
+Journal of Biomedical Engineering Research 47: 268-276 (2026)
+http://dx.doi.org/10.9718/JBER.2026.47.4.268
+268
+3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의
+간단한 제작 및 특성 평가
+홍수지1 · 한병조2 · 남정훈1,2*
+1재능대학교  A I -바이오분석특화연구소 ,  2재능대학교  바이오테크과
+Simple Fabrication and Characterization of a PCL-Based Sub-
+Millifluidic Droplet-Generation Device Using 3D-Printed Stamps
+Suzy Hong1, Byoungjoe Han2 and Jeonghun Nam1,2*
+1AI-Bioanalysis Specialized Research Center, Jaeneung University, Incheon, Republic of Korea
+2Department of Biotechnology, Jaeneung University, Incheon, Republic of Korea
+(Manuscript received 22 June 2026 ; revised 6 August 2026 ; accepted 7 August 2026)
+Abstract: In this study , a simple and low-cost fabrication method for a sub-millifluidic droplet-generation device is
+presented, utilizing 3D-printed stamps and thermoplastic polycaprolactone (PCL). The proposed process leverages
+the low softening temperature of PCL (55~70oC) to form sub-millifluidic channel and sealing layers via hot emboss-
+ing, followed by direct PCL-to-PCL bonding using hot air, without the need for cleanroom facilities, photolithography ,
+or external adhesive materials. This represents a key advancement over previous PCL microfluidic approaches that
+relied on SU-8 molds and adhesive film sealing. The fabricated PCL sub-millifluidic channels showed comparable
+cross-sectional geometry to PDMS channels, with average width and height of 1000 ± 10 m and 500 ± 20 m,
+respectively . These dimensions were intentionally selected to enable visual observation without optical microscopy
+and to ensure compatibility with passive negative-pressure driving using disposable syringes, targeting educational
+and resource-limited applications. Bonding quality was critically dependent on hot-air exposure time, with stable channel
+sealing achieved within an optimal window of 30~50 s. Contact angle measurements (101.9 ± 3.93°, CV = 3.86%)
+confirmed the inherent hydrophobicity of PCL surfaces, enabling droplet generation without surface treatment. Droplets
+were successfully generated in a T-junction configuration with an average diameter of 526 ± 73 m (CV = 13.9%),
+representing acceptable uniformity for educational and basic research purposes under passive driving conditions.
+These results demonstrate the functional feasibility of 3D-printed-stamp-based PCL hot embossing as a proof-of-con-
+cept approach for sub-millifluidic droplet-generation devices, suggesting its potential applicability to point-of-care
+diagnostics, educational settings, and resource-limited research environments.
+Key words: Polycaprolactone, Sub-millifluidics, 3D printing, Hot embossing, Hot-air bonding
+*Corresponding Author : Jeonghun Nam
+Department of Biotechnology, JEI University, 178, Jaeneung-
+ro, Dong-gu, Incheon 22573, Republic of Korea
+Tel: +82-32-890-7024
+E-mail: namjh@jeiu.ac.kr
+이 논문은 2025년도 교육부 및 인천광역시의 재원으로 인천RISE
+센터의 지원을 받아 수행된 지역혁신중심 대학지원체계(RISE)의 결
+과입니다(2025-RISE-04-010).
+I. 서론
+마이크로플루이딕 기술은 미량의 유체를 정밀하게 제어할
+수 있는 장점으로 인해 화학, 생명과학 및 의공학 분야에서
+다양한 응용 연구에 활용되고 있다[1-6]. 특히 액적 기반 마
+이크로플루이딕 시스템은 피코리터(pL)에서 나노리터(nL) 수
+준의 균일한 액적을 고속으로 생성할 수 있어, 화학 반응, 생
+물학적 분석, 물질 합성, 단일세포 분석 등 다양한 분야에서
+주목받고 있다[7-10]. 
+===== PAGE 2 =====
+269
+Journal of Biomedical Engineering Research 47: 268-276 (2026)
+일반적으로 마이크로플루이딕 소자는 polydimethylsiloxane
+(PDMS)을 이용한 소프트 리소그래피 공정을 통해 제작된다
+[11,12]. 이 방법은 높은 광학적 투명도, 기체 투과성, 생체적
+합성 등의 장점으로 널리 활용되고 있으나, 포토마스크 제작,
+UV 노광, 현상 등 클린룸 기반 공정이 필수적이며 전문 장
+비와 숙련된 기술이 요구된다. 이로 인해 제한된 실험 환경
+이나 교육 현장에서의 활용에 현실적인 제약이 따른다. 
+이러한 한계를 극복하기 위해 3D 프린팅, 레이저 가공, 열
+가소성 수지 성형 등 대안적 마이크로플루이딕 제작 방법들
+이 제안되고 있다[13-17]. 그 중 3D 프린팅 기술은 CAD 설
+계를 직접 구조물로 변환할 수 있어 금형 없이도 복잡한 마
+이크로 구조 구현이 가능하며, 최근에는 DLP(Digital Light
+Processing) 방식을 이용하여 50 µm 수준의 해상도를 갖는
+마이크로채널 제작도 보고되고 있다[15]. 
+열가소성 고분자 중 polycaprolactone(PCL)은 약 55~70℃
+의 낮은 연화 온도를 가지는 생분해성 고분자로, 비교적 낮은
+온도에서 성형이 가능하고 생체적합성이 우수하여 조직공학
+및 약물전달 분야에서 광범위하게 연구되어 왔다[18,19]. 이
+러한 특성은 고온 장비 없이도 hot embossing 공정의 수행을
+가능하게 한다.
+기존 연구에서 Fan et al.은 SU-8 기반 마스터 몰드와 hot
+embossing을 이용하여 PCL 마이크로채널을 제작하고, 접착
+필름으로 밀봉하는 방법을 보고하였다[20]. 그러나 이 접근법은
+SU-8 포토리소그래피 공정이 필요하고, 이종 재료 접착 필
+름을 사용함으로써 공정의 단순성과 채널 구조의 일체성 측
+면에서 한계를 가진다. PCL 소재 간의 직접 열접합을 통해
+외부 접착 재료 없이 소자를 완성하는 공정은 아직 충분히
+탐색되지 않았다.
+본 연구에서는 이러한 기술적 공백을 메우기 위해, 3D 프
+린팅 기반 스탬프와 PCL을 이용한 액적 생성용 미세유체소
+자의 새로운 제작 공정을 제안한다. 제안 공정의 핵심적 차
+별점은 다음과 같다: (1) SU-8 포토리소그래피 없이 DLP 3D
+프린팅 스탬프만으로 미세채널을 구현하고, (2) 접착 필름 등의
+이종 재료 없이 PCL-PCL 열풍 직접 접합을 통해 소자를 완
+성하며, (3) 별도의 표면 처리 없이도 액적 생성에 적합한 표
+면 조건을 자연적으로 확보한다는 점이다. 
+본 연구는 열풍 인가 조건에 따른 접합 특성을 체계적으로
+평가하고, PCL 표면의 접촉각 측정을 통해 액적 생성 적합
+성을 확인하였다. 또한 T-junction 구조에서의 액적 생성 실
+험을 통해 제안 공정의 기능적 유효성을 검증하였다. 제안하는
+공정은 클린룸이나 고가 장비 없이도 적용 가능한 접근성 높은
+미세유체소자 제작 방법으로, point-of-care 진단, 교육용 랩
+온어칩, 생분해성 일회용 소자 등 다양한 응용 분야에 기여
+할 수 있을 것으로 기대된다[4,5,21]. 
+II. 연구 방법
+1. 미세유체소자 제작 공정
+본 연구에서는 3D 프린팅 기반 스탬프와 polycaprolactone
+(PCL, Mw ~80,000 g/mol, Sigma-Aldrich, USA) 펠렛을
+이용하여 액적 생성용 미세유체소자를 제작하였다. 전체 제작
+공정은 그림 1에 나타내었으며, 클린룸 환경 및 외부 접착 재
+료 없이 수행 가능한 단순 공정으로 구성하였다. 
+먼저 CAD 소프트웨어(Fusion 360, Autodesk, USA)를
+그림 1. 3D 프린팅 스탬프와 PCL을 이용한 미세유체 소자의 제작 공정 모식도. (a) CAD 설계 및 DLP 방식 3D 프린팅을 통한 스탬프 제
+작, (b) PCL 펠렛 가열 후 hot embossing 공정, (c) 입출구 형성, (d) 열풍 접합 및 소자 완성
+Fig. 1. Fabrication process of the PCL-based sub-millifluidic device using 3D-printed stamps. (a) CAD design and fabrication
+of patterned and flat stamps using DLP 3D printing, (b) hot embossing of PCL after thermal softening, (c) formation of inlet
+and outlet ports, and (d) hot-air- assisted bonding and device assembly
+===== PAGE 3 =====
+3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의 간단한 제작 및 특성 평가   홍수지 · 한병조 · 남정훈
+270
+이용하여 T-junction 구조의 미세채널을 설계하였다. 해당 설
+계를 STL 파일로 변환한 후, DLP 방식의 3D 프린터(Anycubic
+Photon Mono X, Anycubic, China; XY 해상도 50 µm, Z
+해상도 10 µm)를 이용하여 패턴 스탬프(미세채널 형상)와 평판
+스탬프를 각각 출력하였다. 출력된 스탬프는 이소프로판올
+(IPA)로 세척 후 UV 경화기(405 nm, 5분)를 이용하여 후경화
+(post-curing)를 완료하였다. 후처리는 레진 표면의 미반응 모
+노머를 제거하고 기계적 강도를 확보하여, PCL hot embossing
+시 스탬프 변형을 방지하기 위한 필수 공정이다[15]. 
+PCL 펠렛을 70 ± 5℃로 설정된 오븐에서 약 10분간 가열
+하여 연화시킨 후, 원형 디스크(직경 ~35 mm, 두께 ~3 mm)
+형태로 성형하였다. 연화된 PCL 디스크를 패턴 스탬프 위에
+올린 뒤, 수동 압착(약 10~15 N의 균일한 하중)을 통해 미
+세채널이 형성된 채널 플레이트를 제작하였다. 동일한 방법
+으로 평판 스탬프를 이용하여 실링용 플레이트를 제작하였다.
+제작된 PCL 플레이트는 상온에서 10분 이상 냉각시킨 후 스
+탬프로부터 조심스럽게 분리하였다. 이 hot embossing 공정은
+PCL의 낮은 연화 온도를 활용하여 별도의 고온 프레스 장비
+없이도 수행 가능하다[16,20].
+이후 채널 플레이트에 직경 1.5 mm의 biopsy punch(Integra
+Miltex, USA)를 이용하여 유체 주입 및 배출을 위한 입출구
+3개(연속상 1개, 분산상 1개, 출구 1개)를 형성하였다. 채널
+플레이트와 실링 플레이트를 정렬한 뒤, 열풍기(온도 150℃,
+Bosch GHG 18V-50, Germany)를 이용하여 5 cm 거리에
+서 열풍을 인가하였다. 열풍 인가 후 즉시 두 플레이트의 초기
+접촉을 유도하기 위해 가볍게 탭핑한 뒤, 소자 상부에 60 mm
+× 60 mm 크기의 평판을 배치하고 그 위에 1k g  추(영재과
+학사, Korea)를 30분간 적용하여 냉각 중 접합이 안정화되
+도록 하였다. 이때 적용된 압착 압력은 평판 전체 면적 기준
+으로 약 2.7 kPa이다.
+PCL-PCL 열풍 직접 접합은 열풍 인가에 따른 PCL 표면의
+국부적 연화 또는 부분 용융과 접촉 계면에서의 wetting 및
+고분자 사슬 확산에 의해 접합 강도가 형성되는 것으로 해
+석할 수 있으며[22], 이종 재료 접착 필름을 사용하는 기존
+방법[20]에 비해 공정 단순성과 채널 일체성 측면에서 유리
+하다.
+2. 미세채널 형상 분석
+제작된 PCL 미세채널의 형상 재현성을 평가하기 위해
+PDMS를 이용하여 동일한 스탬프 기반 채널을 제작하고, 두
+소자의 단면 형상을 비교하였다. PDMS(Sylgard 184, Dow
+Corning, USA) 비교군은 기저재와 경화제를 10:1 중량비로
+혼합하고 진공 탈포 후 65℃에서 1시간 경화하는 표준 프로
+토콜에 따라 제작하였다[12].
+각 소자의 횡단면 이미지는 면도날로 절단하여 준비한 후
+광학 현미경(BX53, Olympus, Japan)으로 획득하였다. 이
+미지 분석 소프트웨어(ImageJ 1.54, NIH, USA)를 이용하
+여 채널 폭(W)과 높이(H)를 측정하였으며, 채널 전체 길이를
+일정 간격으로 나누어 총 5개 위치에서 반복 측정하였다(n =
+5). 평균값과 표준편차를 계산하여 두 소재 간 형상 재현성을
+비교하였다.
+3. 접합 조건 평가
+열풍 인가 시간에 따른 PCL-PCL 접합 특성을 평가하기
+위해 10, 20, 30, 50 및 60 s의 다섯 가지 조건에서 접합 실
+험을 수행하였다(각 조건 n=5 ) .  접합 완료 후 각 소자에 적색
+식용염료(Red dye, 0.1 wt%)를 첨가한 DI water를 주입하여
+누수 여부를 육안으로 확인하였으며, 접합부 박리, channel
+bursting 및 채널 단면 변형 여부를 함께 관찰하였다.
+접합된 PCL 채널의 유동 안정성을 확인하기 위해 총 유
+량률을 100 µL/min에서 시작하여 500 µL/min 간격으로
+3000 µL/min까지 단계적으로 증가시키며 압력-유량 평가를
+수행하였다(100, 500, 1000, 1500, 2000, 2500, 3000 µL/
+min).
+본 평가에 사용한 채널의 폭은 1000 µm, 높이는 500 µm,
+전체 유로 길이는 117 mm였으며, 계산된 채널 저항은 약 7.7
+×1 09 Pa·s/m3였다. 각 유량 조건에서의 압력차는 식 (1)을
+이용하여 산출하였다. 
+(1)
+여기서 R은 채널 유동저항, Q는 총 유량률을 의미한다.
+4. 표면 특성 분석
+PCL 표면의 젖음성은 스마트폰 카메라를 이용한 이미지
+분석 기반 접촉각 측정 방법을 참고하여 평가하였다[23]. Hot
+embossing으로 제작된 평평한 PCL 플레이트 표면에 마이
+크로피펫을 이용하여 3 µL의 증류수를 분주한 뒤, 액적 형성
+5초 후 스마트폰 카메라로 측면 이미지를 촬영하였다. 정적
+접촉각은 이미지 분석 소프트웨어(ImageJ 1.54, NIH, USA)의
+Contact Angle Plug-in을 이용하여 산출하였으며[24], 총 5회
+반복 측정을 수행하여 평균값, 표준편차 및 변동계수(CV)를
+계산하였다. 본 측정은 전진각과 후퇴각을 구분하지 않은 정적
+접촉각 측정이며, PCL 표면의 기본적인 소수성을 확인하기
+위한 목적으로 수행되었다.
+5. 액적 생성 실험
+제작된 소자의 기능적 유효성을 검증하기 위해 T-junction
+구조에서 음압 기반 액적 생성 실험을 수행하였다. 연속상
+(continuous phase)으로는 mineral oil을 사용하였고, 분산
+상(dispersed phase)으로는 적색 식용염료(red food dye,
+PR Q
+===== PAGE 4 =====
+271
+Journal of Biomedical Engineering Research 47: 268-276 (2026)
+0.1 wt%)를 첨가한 DI water를 사용하였다. 유체 구동은 30
+mL 일회용 주사기(한국백신, Korea)의 플런저를 후퇴시켜
+발생하는 음압을 이용하였으며, 실험 셋업은 그림 5(a)에 나
+타내었다.
+주사기 내부에 형성되는 상대 음압은 이상기체 법칙을 기
+반으로 계산하였다. 초기 부피 Vi에서 최종 부피 Vf까지 플
+런저를 후퇴시켰을 때의 최종 내부압 Pf는 식 (2)에 따라 산
+출하였다.
+(2)
+여기서 Patm은 대기압(101.3 kPa), Vi는 초기 주사기 부피, Vf는
+최종 주사기 부피이며, 생성된 상대 음압은 로 정
+의하였다.
+단, 본 계산값은 플런저 후퇴 직후의 최대 순간 음압이며,
+액체가 채널 내로 유입됨에 따라 시간에 따라 점진적으로 감
+소한다. 따라서 본 연구에서 제시하는 음압 조건은 정상 상
+태 압력이 아닌 초기 구동 압력을 의미한다. 
+초기 음압 조건은 주사기 내부 공기 부피를 조절하는 방식
+으로 설정하였다. 먼저 주사기를 블런트 니들로부터 분리한
+상태에서 대기압 조건으로 플런저 위치를 조정하여 초기 부
+피(Vi)를 설정하였다. 이후 주사기를 블런트 니들에 다시 연
+결하고, 플런저가 최종 부피(Vf =3 4 )  m L  위치에 고정되도록
+제작된 지그에 장착하여 음압을 발생시켰다.
+본 실험에서는 주사기 플런저의 초기 위치를 달리하여 세
+가지 음압 조건을 설정하였다. Case 1은 초기 부피 10 mL에서
+최종 부피 34 mL, Case 2는 초기 부피 25 mL에서 34 mL,
+Case 3은 초기 부피 30 mL에서 34 mL로 설정하였으며, 계
+산된 상대 음압은 각각 71.51, 26.81 및 11.92 kPa였다. 
+세 조건은 예비실험에서 관찰된 유동 거동의 전 범위, 즉
+무유동 또는 불안정 유동 조건부터 thread-like flow가 나타
+나는 고음압 조건까지를 포함하도록 선정하였다. 이 중 26.81 kPa
+조건은 비교적 안정적인 액적 생성이 관찰된 조건으로, 이후
+액적 직경 분석에 사용하였다.
+각 조건에서의 액적 생성 과정은 스마트폰 카메라를 이용
+하여 기록하였으며, VideoTracker를 이용한 red intensity
+profile 분석을 통해 액적 생성 빈도를 산출하였다. 생성된 액
+적의 등가 직경은 식 (3)에 따라 산출하였다. 
+(3)
+여기서 deq는 액적의 등가 직경, A는 ImageJ로 측정한 액적
+면적을 의미한다. 액적 직경 분석은 26.81 kPa 조건에서 단
+일 대표 소자로부터 생성된 100개의 액적을 대상으로 수행
+하였으며, 제시된 변동계수(CV)는 동일 소자 내 액적 직경
+변동(intra-device variation)을 나타낸다.
+III. 연구 결과
+1. 미세채널 형상 재현성 평가
+본 연구에서는 교육용 및 자원 제한 환경 응용을 목표로 하여,
+광학현미경 없이도 육안 관찰이 가능하고 일회용 주사기를
+이용한 수동 음압 구동에 적합한 1000 µm 폭, 500 µm 높
+이의 채널 치수를 선정하였다. 해당 치수는 엄밀한 마이크로
+      /fa t m i fPP V V
+     atm fPP P    4 /eqdA 
+그림 2. PCL 및 PDMS로 제작된 미세채널의 단면 형상 비교. (a) PCL 채널 단면 이미지, (b) PDMS 채널 단면 이미지, (c) 채널 폭 정량
+분석 결과, (d) 채널 높이 정량 분석 결과
+Fig. 2. Cross-sectional comparison of sub-millifluidic channels fabricated using PCL and PDMS. (a) Cross-sectional image
+of the PCL channel, (b) cross-sectional image of the PDMS channel, (c) quantitative comparison of channel width, and (d)
+quantitative comparison of channel height
+===== PAGE 5 =====
+3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의 간단한 제작 및 특성 평가   홍수지 · 한병조 · 남정훈
+272
+플루이딕 기준(<100 µm)에 비해 크지만, 본 공정의 접근성
+및 교육적 활용 목적에 부합하는 실용적인 설계 기준이다.
+본 공정의 적용 가능 채널 폭 범위를 평가하기 위해 200,
+400, 600, 800, 1000, 1200 µm의 여섯 가지 폭 조건에서 미
+세채널을 제작하였다(그림 2(a), (b)). 모든 채널 폭 조건에서
+PCL 채널의 폭 및 높이 평균값은 master mold 및 PDMS
+채널과 비교하여 통계적으로 유의미한 차이를 보이지 않았으
+며, 전반적으로 일관된 치수 재현성을 나타내었다(그림 2(c),
+(d); Student’s t-test, p > 0.05). 다만 200 µm 조건에서는
+평균 치수의 재현성과는 별개로 채널 단면이 부분적으로 불
+완전하게 형성되는 양상이 관찰되었다. 이는 DLP 프린터의
+XY 해상도(50 µm)와 PCL의 열연화 특성에 따른 성형 한계에
+기인한 것으로 판단된다. 따라서 본 연구에서는 단순한 폭 및
+높이 평균값뿐만 아니라 단면 형상의 완전성과 유로 연속성을
+함께 고려하여, 정상적인 채널 형상이 안정적으로 재현된 최저
+폭 조건인 400 µm를 본 공정의 실용적 하한 채널 폭으로 판
+단하였다. 이 결과는 본 공정이 단일 치수에 국한되지 않고
+400 µm 이상의 채널 폭 범위에서 안정적으로 적용 가능함을
+시사한다.
+이후 액적 생성 실험은 광학현미경 없이 육안 관찰이 가능
+하고 수동 음압 구동에 적합한 1000 µm × 500 µm 채널을
+대표 조건으로 선정하여 수행하였으며, 이 조건에서 PCL 채
+널의 평균 폭과 높이는 각각 1000 ± 10 µm 및 500 ± 20 µm,
+PDMS 채널은 1000 ± 5 µm 및 500 ± 17 µm로 측정되었다.
+단면 형상을 자세히 관찰하면, DLP 3D 프린팅 스탬프 특
+성상 채널 단면이 완전한 직사각형보다는 다소 사다리꼴
+(trapezoidal)에 가까운 형태를 나타내었다. 이는 DLP 방식의
+층 적층 특성과 레진의 광경화 과정에서 발생하는 미세한 계
+단 형상(staircase effect)에 기인한 것으로 판단된다[15]. 이
+러한 단면 형상 편차에도 불구하고 채널의 연속성과 개방 구
+조는 유지되었으며, 폭과 높이의 측정값 또한 설계 치수와 유
+사한 범위에서 재현되었다. 이는 채널 폭(1000 µm) 혹은 높
+이(500 µm) 대비 약 5% 미만 수준의 오차로, DLP 기반 3D
+프린팅 미세채널에서 일반적으로 보고되는 치수 오차 범위에
+해당하며[15], T-junction에서의 단면적 및 유동저항 추정에
+유의한 영향을 미치지 않는 수준이다.
+이러한 결과는 포토리소그래피 기반 SU-8 마스터 몰드 없
+이도 3D 프린팅 스탬프를 이용한 PCL hot embossing 공
+정이 미세유체 응용에 적합한 채널 형상을 구현할 수 있음을
+보여준다. 단, 100 µm 이하의 정밀한 채널이 요구되는 응용의
+경우 현재 DLP 프린터의 XY 해상도 한계(50 µm)로 인해
+적용에 제약이 있을 수 있으며, 이는 본 공정의 주요 한계점
+으로 향후 고해상도 프린터 도입을 통한 개선이 필요하다.
+2. 열풍 조건에 따른 접합 특성 평가
+열풍 인가 시간에 따른 PCL-PCL 접합 특성과 접합 후 유로
+안정성을 평가하기 위해 채널 접합 및 버스팅 테스트를 수행
+하였다. 접합 조건은 150℃ hot air blowing으로 설정하였
+으며, 열풍 인가 시간은 10, 20, 30, 50 및 60 s로 구분하였
+다. 각 조건에서 제작된 PCL 채널에는 염료 용액을 주입하여
+그림 3. PCL 채널의 접합 및 유동 안정성 평가 결과. (a) 150℃ 열풍 인가 조건에서 열풍 인가 시간에 따른 PCL 채널의 대표 접합 이미지,
+(b) 단계적 유량 증가 조건(100 µL/min에서 3000 µL/min까지 500 µL/min 간격)에서 접합된 PCL 채널 내 염료 흐름을 나타낸 상면 이
+미지로, 30~50 s 접합 조건에서 채널 무결성과 누수 없음이 확인됨
+Fig. 3. Bonding stability and flow stability evaluation of the PCL channel. (a) Repr esentative bonding images of the PCL
+channel according to hot-air exposure time under 150 ℃ hot-air blowing conditions. (b) T op-view images of dye flow in
+bonded PCL channels under stepwise flow -rate conditions (from 100 µL/min to 3000 µL/min at 500 µL/min intervals),
+showing channel integrity and the absence of leakage under 30–50 s bonding conditions
+===== PAGE 6 =====
+273
+Journal of Biomedical Engineering Research 47: 268-276 (2026)
+유체가 유로를 따라 안정적으로 흐르는지 확인하였으며, 외
+부 누수, channel bursting, 접합부 박리 및 채널 단면 변형
+여부를 관찰하였다.
+접합된 채널의 유동 안정성을 평가하기 위해 총유량률
+(Qtotal)을 100 µL/min에서 시작하여 500 µL/min 간격으로
+3000 µL/min까지 단계적으로 적용하였다. 본 채널의 저항
+값 R = 7.7 × 109 Pa·s/m3를 식 (1)에 적용하면, 100 µL/min
+조건에서의 예상 압력차는 약 0.013 kPa이며, 3000 µL/min
+조건에서의 예상 압력차는 약 0.385 kPa로 산출된다.
+20 s 이하의 짧은 열풍 인가 조건에서는 PCL 표면의 연
+화가 충분하지 않아 접합 계면이 안정적으로 형성되지 않았
+다. 특히 100 µL/min의 낮은 유량 조건에서도 누수가 발생
+하였으며, 이는 약 0.013 kPa 수준의 매우 낮은 내부 압력
+에서도 접합부가 유체 압력을 견디지 못했음을 의미한다.
+반면, 30 s 이상의 조건에서는 총유량률을 3000 µL/min
+까지 증가시켰을 때에도 외부 누수 또는 channel bursting이
+관찰되지 않았다. 60 s 이상의 열풍 인가 조건에서는 누수나
+bursting은 관찰되지 않았으나, PCL의 과도한 연화로 인해
+채널 단면적이 부분적으로 감소하는 channel deformation
+이 확인되었다. 이러한 단면 불균일성은 액적 생성과 같이 유
+량비와 압력 균형에 민감한 미세유체 응용에서 재현성을 저
+하시킬 수 있다.
+열풍 인가 시간에 따른 접합 결과를 표 1에 요약하였다.
+종합하면, 20 s 이하 조건은 낮은 압력에서도 누수가 발생
+하여 접합 안정성이 부족하였고, 60 s 이상 조건은 채널 단
+면 변형으로 인해 균일한 유동 저항 유지가 어려웠다. 이에
+따라 본 연구에서는 30~50 s 범위를 PCL-PCL 열풍 접합의
+최적 공정 조건으로 선정하였다.
+3. PCL 표면 접촉각 특성
+PCL 표면의 정적 접촉각 측정 결과를 그림 4에 나타내었
+다. 측정된 접촉각은 101.9 ± 3.93°(CV = 3.86%, n = 5)로
+나타났으며, 이를 통해 PCL 표면이 기본적으로 소수성을 나
+타냄을 확인하였다. 이는 PCL의 비극성 알킬 사슬 구조에 기
+인한 것으로, 선행연구에서 보고된 PCL 표면의 소수성과 일
+치하는 결과이다[25].
+접촉각이 90° 이상인 소수성 표면은 본 액적 생성 실험 시
+스템(연속상: mineral oil, 분산상: 수용액)에서 중요한 의미를
+가진다. Mineral oil에 비해 수용액에 대한 PCL 표면의 낮은
+친화성은 수성 분산상이 채널 벽면에 젖지 않고 이산화된 액적
+형태를 유지하는 데 유리한 조건을 형성한다[26]. 즉, 별도의
+표면 소수화 처리 없이도 안정적인 water-in-oil 액적 생성을
+위한 표면 조건이 자연적으로 확보되며, 이는 공정 단순화에
+크게 기여한다.
+한편, 본 연구에서 측정한 접촉각은 평평한 PCL 판 표면에
+증류수 액적을 형성하고 공기 중에서 측정한 정적 접촉각이다.
+따라서 실제 채널 내부에서 물, mineral oil 및 PCL 벽면이
+동시에 접하는 3상 계면 조건과는 차이가 있을 수 있다. 또한
+표 1. 열풍 인가 시간별 PCL-PCL 접합 결과 요약
+T able 1. PCL–PCL bonding results as a func tion of hot-air blowing time
+Hot-air blowing time (s) Flow rate at leakage onset (µL/min) Channel deformation Bonding assessment
+10 100 (immediate leakage) Not observed Unstable
+20 100 (immediate leakage) Not observed Unstable
+30 >3000 (no leakage) Not observed Stable
+50 >3000 (no leakage) Not observed Stable
+60 >3000 (no leakage) Cross-sectional deformation observed Unsuitable
+그림 4. PCL 표면의 접촉각 측정 결과. (a) 물방울 접촉각 이미지, (b) 정량 분석 결과 — 평균 101.9 ± 3.93°, CV = 3.86% (n = 5)
+Fig. 4. Contact angle measurement of the PCL surface. (a) Image of a water droplet on the PCL surface. (b) Quantitative
+analysis of the contact angle, showing a mean value of 101.9 ± 3.93° and a CV of 3.86% (n = 5)
+===== PAGE 7 =====
+3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의 간단한 제작 및 특성 평가   홍수지 · 한병조 · 남정훈
+274
+실제 채널 벽면은 3D 프린팅 공정에서 유래한 계단형 표면
+거칠기와 사다리꼴 단면 형상을 가질 수 있으므로, 본 접촉각
+값은 액적 생성에 필요한 PCL 표면의 기본적인 소수성을 확
+인하는 지표로 해석되어야 하며, 실제 채널 내부의 젖음 특
+성을 완전히 대표하지는 않는다.
+아울러, 소수성 PCL 표면은 형광 표지 생체분자를 이용하는
+실험에서 비특이적 흡착(nonspecific adsorption)의 가능성
+이 있으므로, 생물학적 분석 적용 시에는 BSA 코팅이나 PEG
+처리 등의 표면 개질이 추가로 필요할 수 있다. 또한 PCL의
+광학적 특성으로 인해 형광 기반 정밀 분석 적용 시 추가 검
+토가 필요하다.
+4. 액적 생성 결과
+제작된 PCL 미세유체소자의 기능적 유효성을 검증하기 위
+해 T-junction 구조에서 음압 기반 액적 생성 실험을 수행하
+였으며, 그 결과를 그림 5에 나타내었다. 별도의 시린지 펌프
+없이 30 mL 일회용 주사기의 플런저를 후퇴시켜 음압을 형
+성하고, 이로 인해 발생한 압력차를 이용하여 유체를 구동하
+였다.
+분석 결과, 71.51, 26.81 및 11.92 kPa 조건에서의 액적
+생성 빈도는 각각 0, 5 및 0.5 drops/s로 측정되었다.
+71.51 kPa 조건에서는 상대적으로 큰 음압이 형성되었으
+나, 안정적인 개별 액적 생성은 관찰되지 않았다. 해당 조건
+에서는 분산상 용액이 주채널 방향으로 빠르게 유입되면서
+길게 이어지는 elongated slug 또는 thread-like flow 형태를
+나타내었다. 이는 과도한 음압으로 인해 분산상 유입이 급격
+히 증가하면서, 연속상 유동이 분산상 neck을 주기적으로 압
+착하여 droplet pinch-off를 유도하기 전에 분산상이 주채널을
+빠르게 점유하였기 때문으로 해석된다.
+반면, 26.81 kPa 조건에서는 5 drops/s의 액적 생성 빈도가
+그림 5. PCL 미세유체소자를 이용한 액적 생성 결과. (a) 음압 기반 실험 셋업, (b) T-junction 구조에서의 액적 생성 이미지, (c) 음압 조
+건별 red intensity profile, (d) 액적 크기 분포 — 평균 직경 526 ± 73 µm, CV = 13.9% (n = 100)
+Fig. 5. Demonstration of droplet generation using the PCL-based sub-millifluidic device. (a) Experimental setup for
+negative-pressure-driven droplet generation. (b) Representative image of droplet generation in the T-junction structure. (c)
+Red intensity profile analysis under different negative pressure conditions. (d) Size distribution analysis of the generated
+droplets, showing a mean diameter of 526 ± 73 µm and a CV  of 13.9% (n = 100)
+===== PAGE 8 =====
+275
+Journal of Biomedical Engineering Research 47: 268-276 (2026)
+확인되었으며, 세 조건 중 가장 안정적인 반복 droplet pinch-
+off가 관찰되었다. 11.92 kPa 조건에서는 액적 생성 빈도가
+0.5 drops/s로 낮게 측정되었으며, 이는 해당 음압 조건에서
+분산상 유입 및 neck squeezing이 충분히 빠르게 반복되지
+않았기 때문으로 판단된다.
+26.81 kPa 조건에서 생성된 액적 100개를 대상으로 크기
+분포를 분석한 결과, 평균 액적 직경은 526 ± 73 µm였으며,
+변동계수(CV)는 13.9%로 산출되었다. 각 직경 구간에 포함
+된 액적의 비율은 observed fraction으로 나타내어 액적 크기
+분포를 시각화하였다.
+IV. 고찰 및 결론
+T-junction에서 액적 형성 메커니즘은 capillary number
+(Ca, 식 (4))를 이용하여 정량적으로 해석할 수 있다.
+(4)
+여기서 는 연속상의 점도(mineral oil: ~30 mPa·s), U는 채널
+내 대표 유속, 는 분산상-연속상 계면장력(water-mineral oil:
+~50 mN/m)을 의미한다. 단, U는 P = RQ(식 (1))로부터 산
+출한 유량을 채널 단면적(1000 µm × 500 µm = 0.5 mm2)으로
+나누어 환산한 평균 유속이며, 이상기체법칙 기반 초기 음압
+으로부터 추정한 최대값이다. 액체 유입에 따른 음압 감소를
+고려하면 실험 중 Ca는 제시값보다 낮은 범위에서 형성된다.
+본 연구의 채널 물성과 채널 저항 R=7 . 7×1 09 Pa·s/m3을
+이용하여 각 음압 조건의 초기 최대 유속 U를 추정하면,
+26.81 kPa 조건에서 Ca  4.2×103, 71.51 kPa 조건에서
+Ca  1.1×102로 계산된다. 이 값들은 모두 Ca << 1범위에
+속하여 계면장력이 점성력보다 우세한 squeezing regime에
+해당한다.
+Garstecki et al.[27]과 Christopher and Anna[28]에 따
+르면, squeezing regime에서 droplet break-up은 전단응력
+보다 droplet 전후의 pressure drop에 의해 지배되며, 생성
+되는 분산상 segment의 길이는 L/w 1+ Qd/Qc로 연속상
+대비 분산상의 유량비(Qd/Qc)에 크게 의존한다. 따라서 71.51
+kPa 조건에서 Ca값은 낮은 범위로 추정되었으나, 관찰된
+thread-like flow는 Ca 변화만으로 설명하기보다는 음압 상
+승에 따른 유량비 변화로 인해 분산상 segment 길이가 채널
+폭을 크게 초과하였을 가능성으로 해석된다.
+이는 squeezing regime으로 추정되는 조건 내에서도 유
+량비에 따라 droplet에서 slug, 나아가 thread-like flow로의
+전이가 발생할 수 있음을 시사하며[27,28], 유량비 변화가 본
+실험 조건에서의 유동 형태 전이에 관여했을 가능성이 있는
+것으로 판단된다. 다만 본 연구에서 제시한 Ca 값은 실제 채
+널 내 유량을 직접 측정하여 산출한 값이 아니라, 초기 최대
+음압과 문헌 기반 물성값을 이용한 추정값이다. 또한 수동 음
+압 구동 과정에서 음압이 시간에 따라 감소하므로, 액적 생
+성 중 실제 채널 유동조건은 일정하지 않았을 가능성이 있다.
+특히 채널 내 예상 압력강하와 인가 음압 사이에 압력 스케
+일 차이가 존재하므로, 인가 음압을 채널 내 유동조건으로 직
+접 환산하는 데에는 한계가 있다.
+본 연구에서 측정된 CV 13.9%는 정밀 시린지 펌프를 사
+용하는 PDMS 기반 시스템에서 일반적으로 보고되는 단분
+산 액적의 CV에 비해 다소 높은 수준이다[29]. 그러나 이는
+정밀 유량 제어 장비 없이 수동 음압 구동 방식만을 사용하
+였기 때문으로, 교육용 마이크로플루이딕 실습 및 기초 연구
+목적으로는 충분히 허용 가능한 수준의 균일도로 판단된다. 
+이상의 액적 생성 결과를 종합하면, 제작된 PCL T-junction
+소자는 수동 음압 조건에서도 water-in-oil 액적을 생성할 수
+있음을 확인하였다. 특히 26.81 kPa 조건(Ca  4.2×103)에
+서 가장 높은 액적 생성 빈도(5 drops/s)와 526 ± 73 µm(CV
+= 13.9%)의 균일한 액적이 생성되어, 해당 음압이 squeezing
+regime 내에서 분산상 유입과 연속상 squeezing 사이의 유
+량비 균형을 형성하는 데 가장 적합한 조건으로 판단된다. 향
+후 안정적인 단분산 액적 생성을 위해서는 실제 유량 측정을
+통한 Ca 및 유량비의 정량적 검증과 유량비 최적화가 추가
+적으로 필요하다.
+채널 형상 재현성, 열풍 접합 안정성, PCL 표면 소수성 및
+액적 생성 능력을 통합적으로 고려하면, 네 가지 특성이 상호
+유기적으로 작용하여 본 소자의 기능적 성능을 뒷받침하고
+있음을 확인할 수 있다. 특히 채널 형상의 재현성이 액적 크
+기의 균일도에 직접적인 영향을 미치며, 안정적인 접합이 장
+시간 실험 중 누수 없는 액적 생성을 가능하게 하는 필수 조
+건임을 알 수 있다.
+본 연구에서는 DLP 3D 프린팅 스탬프와 PCL을 이용하
+여 액적 생성용 미세유체소자를 간단하게 제작하는 방법을
+제안하고, 채널 형상 재현성, 접합 특성, 표면 젖음성 및 액
+적 생성 성능을 체계적으로 평가하였다. 주요 결과를 요약하
+면 다음과 같다.
+첫째, 3D 프린팅 스탬프를 이용한 PCL hot embossing 공
+정은 400~1200 µm의 채널 폭 범위에서 안정적인 단면 형
+상과 일관된 치수 재현성을 확보하였으며(대표 조건 1000 ±
+10 µm × 500 ± 20 µm), 교육용 및 자원 제한 환경에서의
+활용을 목표로 육안 관찰 및 수동 음압 구동에 적합하도록
+설계되었다. 둘째, 열풍 인가 시간 최적화(30~50 s)를 통해
+외부 접착 재료 없이 PCL-PCL 직접 접합이 가능하였으며,
+이는 PCL 계면의 부분 용융과 고분자 사슬 확산에 의한 접
+합 메커니즘으로 해석된다. 셋째, PCL 표면의 소수성(접촉각
+101.9 ± 3.93°, CV = 3.86%)이 별도의 표면 처리 없이도 안
+정적인 water-in-oil 액적 생성에 적합한 조건을 자연적으로
+   /Ca U 
+===== PAGE 9 =====
+3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의 간단한 제작 및 특성 평가   홍수지 · 한병조 · 남정훈
+276
+제공함을 확인하였다. 넷째, T-junction 구조에서 평균 직경
+526 ± 73 µm, CV = 13.9%의 액적 생성이 가능함을 입증하
+였으며, 이는 수동 음압 구동 조건에서 교육용 및 기초 연구
+목적으로 활용 가능한 수준이다.
+본 공정의 주요 한계점으로는 현재 DLP 프린터 해상도에
+의한 실용적 하한 채널 폭이 약 400 µm 수준으로 제한된다는
+점, 열풍 조건에 따른 공정 윈도우의 협소성, PCL의 광학적
+특성으로 인해 형광 기반 정밀 분석 적용 시 추가 검토가 필
+요한 점 등이 있다. 이러한 한계를 극복하기 위해, 향후 연구
+에서는 고해상도 프린터 도입을 통한 채널 미세화, 온도 제
+어형 핫플레이트를 이용한 접합 공정 안정화, PCL 소자의 광
+학적 특성 평가를 진행할 계획이며, 복수의 독립 제작 소자를
+대상으로 액적 생성 빈도, 평균 직경 및 CV를 비교하여 공정
+재현성을 추가 검증할 계획이다. 또한 혈액 및 세포 현탁액 등
+실제 생물학적 시료에의 적용 가능성 검토와 PCL의 생분해
+성을 활용한 일회용 point-of-care 진단 소자 및 약물 스크리
+닝 플랫폼으로의 확장도 중요한 후속 연구 방향이 될 것이다.
+본 연구에서 제안한 공정은 별도의 클린룸이나 복잡한 장비
+없이도 적용 가능한 접근성 높은 PCL 기반 미세액적 생성
+소자 제작 방법으로서, 자원 제한 환경에서의 기초 연구, 교
+육용 마이크로플루이딕 실습, 생분해성 소자를 활용한 응용
+연구 뿐만 아니라, 향후 더 작은 스케일의 마이크로플루이딕
+스 구현 및 응용 연구 등 다양한 분야에 기여할 수 있을 것
+으로 기대된다.
+References
+  [1] Whitesides GM. The origins and the future of microfluidics.
+Nature. 2006;442:368-73.
+  [2] Squires TM, Quake SR. Microfluidics: Fluid physics at the
+nanoliter scale. Rev Mod Phys. 2005;77(3):977-1026.
+  [3] Sackmann EK, Fulton AL, Beebe DJ. The present and future role
+of microfluidics in biomedical research. Nature. 2014;507:181-9.
+  [4] Jee H, Nam J, Lim CS. Malaria Parasite Separation from
+White Blood Cells Using Conductive Liquid-Based Standing
+Surface Acoustic Wave (CL-SSAW). J Biomed Eng Res.
+2019;40(5):151-157.
+  [5] Choo SH, Park J, Kim TE, Gang TG, An JS, Oh G, Kim Y,
+Park KB, Park C, Lee M, Lim H, Nam J. Integrated Hybrid
+Device for High-Efficiency Size-Tunable Particle Separa-
+tion. J Biomed Eng Res. 2022;43(3):170-176.
+  [6] Lee S. Microtechnology for Biotechnology and Medicine. J
+Biomed Eng Res. 2008;29(1):1-7.
+  [7] Teh SY, Lin R, Hung LH, Lee AP. Droplet microfluidics. Lab
+Chip. 2008;8(2):198-220.
+  [8] Guo MT, Rotem A, Heyman JA, Weitz DA. Droplet micro-
+fluidics for high-throughput biological assays. Lab Chip.
+2012;12(12):2146-55.
+  [9] Kim SJ, Kang HS, Yang YS, Kim GB. Effect of Intersection
+Angle of the Flow-focusing Type Droplet Generation Device
+Channel on Droplet Diameter by using Numerical Simula-
+tion Modeling. J Biomed Eng Res. 2015;36(3):61-68.
+[10] Chung SE, Park W, Kwon S. Dynamic Flow Lithography
+Technologies. J Biomed Eng Res. 2009;30(6):453-460.
+[11] Xia Y, Whitesides GM. Soft lithography. Angew Chem Int
+Ed. 1998;37(5):550-75.
+[12] Duffy DC, McDonald JC, Schueller OJA, Whitesides GM.
+Rapid prototyping of microfluidic systems in poly(dimethyl-
+siloxane). Anal Chem. 1998;70(23):4974-84.
+[13] Becker H, Gartner C. Polymer microfabrication technologies
+for microfluidic systems. Anal Bioanal Chem. 2008;390(1):89-
+111.
+[14] Tsao CW, DeVoe DL. Bonding of thermoplastic polymer
+microfluidics. Microfluid Nanofluid. 2009;6(1):1-16.
+[15] Waheed S, Cabot JM, Macdonald NP, Lewis T, Guijt RM,
+Paull B, Breadmore MC. 3D printed microfluidic devices:
+enablers and barriers. Lab Chip. 2016;16(11):1993-2013.
+[16] Becker H, Heim U. Hot embossing as a method for the fab-
+rication of polymer high aspect ratio structures. Sens Actua-
+tors A Phys. 2000;83(1-3):130-5.
+[17] Duong VT, Kim JP, Kim K, Ko H, Hwang CH, Koo KI. Three-
+dimensional Bio-printing Technique: Trend and Potential for
+High Volume Implantable Tissue Generation. J Biomed Eng
+Res. 2018;39(5):188-207.
+[18] Woodruff MA, Hutmacher DW. The return of a forgotten
+polymer—polycaprolactone in the 21st century. Prog Polym
+Sci. 2010;35(10):1217-56.
+[19] Serrano MC, Pagani R, Vallet-Regi M, Pena J, Ramila A,
+Izquierdo I, Portoles MT. In vitro biocompatibility assessment
+of poly(ε-caprolactone) films using L929 mouse fibroblasts.
+Biomaterials. 2004;25(24):5603-11.
+[20] Fan Y, Liu S, He J, Gao K, Zhang Y. Rapid and low-cost hot-
+embossing of polycaprolactone microfluidic devices. Mater
+Res Express. 2018;5(1):015305.
+[21] Choi HJ, Jang WS, Nam J, Lim CS. A novel Method for
+Blood Typing using Acoustic Streaming. J Biomed Eng Res.
+2018;39(6):250-255.
+[22] Wool RP, O'Connor KM. A theory of crack healing in poly-
+mers. J Appl Phys. 1981;52(10):5953-63.
+[23] Chalise R, Niroula A, Shrestha P, Paudel B, Subedi D, Khanal
+R. A low-cost goniometer for contact angle measurements
+using drop image analysis: Development and validation. AIP
+Adv. 2023;13(8):085123.
+[24] Buahom P. Measuring the contact angle using ImageJ with
+Contact Angle Plug-in. ResearchGate. 2018;November:1.
+[25] Gonçalves AM, Leal F, Moreira A, Schellhorn T, Blahnová
+VH, Zeiringer S, Vocetková K, Tetyczka C, Simaite A, Buzgo M,
+Roblegg E, Costa PF, Ertl P, Filová E, Kohl Y. Potential of
+electrospun fibrous scaffolds for intestinal, skin, and lung epithelial
+tissue modeling. Adv NanoBiomed Res. 2023;3(4):2200104.
+[26] Shui L, Eijkel JCT, van den Berg A. Multiphase flow in micro-
+fluidic systems—control and applications of droplets and
+interfaces. Adv Colloid Interface Sci. 2007;133(1):35-49.
+[27] Garstecki P, Fuerstman MJ, Stone HA, Whitesides GM. For-
+mation of droplets and bubbles in a microfluidic T-junction—
+scaling and mechanism of break-up. Lab Chip. 2006;6(3):437-46.
+[28] Christopher GF, Anna SL. Microfluidic methods for generating
+continuous droplet streams. J Phys D Appl Phys. 2007;40(19).
+[29] Chen SK, Ju XJ, Wei J, Wang W, Chu LY. Controllable prepa-
+ration of monodisperse chitosan microspheres based on micro-
+fluidic technology. J Chem Educ. 2023;100(9):3526-32.
