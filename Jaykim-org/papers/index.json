@@ -1,0 +1,29 @@
+[
+  {
+    "id": "2026_Hong_JBER",
+    "title": "3D 프린팅 스탬프와 PCL을 이용한 미세액적 생성 소자의 간단한 제작 및 특성 평가 (Simple Fabrication and Characterization of a PCL-Based Sub-Millifluidic Droplet-Generation Device Using 3D-Printed Stamps)",
+    "authors": [
+      "Hong S",
+      "Han B",
+      "Nam J"
+    ],
+    "journal": "J Biomed Eng Res",
+    "year": 2026,
+    "doi": "10.9718/JBER.2026.47.4.268",
+    "pdf": "papers/2026_Hong_Nam_JBER_47-268_PCL-3Dprinted-stamp-droplet-device.pdf",
+    "text": "papers/2026_Hong_Nam_JBER_47-268_PCL-3Dprinted-stamp-droplet-device.txt",
+    "tags": [
+      "3d-printing",
+      "DLP",
+      "PCL",
+      "hot-embossing",
+      "droplet",
+      "T-junction",
+      "sub-millifluidics",
+      "POCT"
+    ],
+    "added": "2026-09-05",
+    "n_pages": 9,
+    "analysis": "analysis/2026_Hong_JBER_PCL-3Dprinted-stamp-droplet.md"
+  }
+]
