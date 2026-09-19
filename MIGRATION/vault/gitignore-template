@@ -1,0 +1,44 @@
+# ===== 옵시디언 볼트용 .gitignore =====
+# 원칙: 노트(.md)는 전부 추적, 머신별 상태와 캐시는 제외.
+# 머신별 상태 파일을 추적하면 기기마다 충돌이 나므로 반드시 제외합니다.
+
+# --- 옵시디언 머신별 상태 (충돌의 주원인) ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+.trash/
+
+# 플러그인 설정은 기기 간 공유하는 편이 좋으므로 추적합니다.
+# 기기마다 다르게 쓰고 싶다면 아래 두 줄의 주석을 해제하십시오.
+# .obsidian/plugins/
+# .obsidian/themes/
+
+# --- 클라우드 동기화 부산물 ---
+*conflicted copy*
+*충돌된 사본*
+*sync-conflict*
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# --- 대용량 첨부 (필요 시 Git LFS로 전환) ---
+# GitHub는 100MB 초과 파일을 거부하고, 50MB 초과 시 경고합니다.
+# 원본 의료영상은 볼트 밖 스토리지에 두고 노트에는 경로만 기록하는 것을 권장합니다.
+*.dcm
+*.nii
+*.nii.gz
+*.svs
+*.czi
+*.raw
+*.mov
+*.mp4
+
+# --- 자격증명 (실수 방지) ---
+.env
+.env.*
+*credentials*.json
+*secret*.json
+*.pem
+*.key
